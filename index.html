@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ChatRoom</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/69f652d377.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container text-center my-2 w-75 mx-auto">
+        <h1 class="my-3">CHATROOM</h1>
+        <p class="my-2 text-muted">choose a chatroom:</p>
+        <div class="button-wrapper mb-4">
+            <button id="football" class="btn btn-primary text-light">#football</button>
+            <button id="politics" class="btn btn-primary text-light">#politics</button>
+            <button id="music" class="btn btn-primary text-light">#music</button>
+            <button id="car" class="btn btn-primary text-light">#car</button>
+        </div>
+        <form id='message-form' class="input-group my-2">
+            <label for="message" class="text-muted border input-group-text input-group-prepend">Your Message:</label>
+            <input class="form-control" type="text" id="message">
+            <button class="btn btn-primary input-group-append" type="submit">Send</button>
+        </form>
+        <form id="name-form" class="input-group my-2">
+            <label for="name" class="text-muted border input-group-text input-group-prepend">Update Name:</label>
+            <input class="form-control" type="text" id="name">
+            <button class="btn btn-primary input-group-append" type="submit">Update</button>
+        </form>
+    </div>
+    <div id="message-box" class="w-75 border border-success rounded-lg p-2 mx-auto"></div>
+    <div id="nonsense">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDVaZBk1rDjEWOMTS1mfns9m4SvkQf1CTg",
+            authDomain: "people-e7967.firebaseapp.com",
+            databaseURL: "https://people-e7967.firebaseio.com",
+            projectId: "people-e7967",
+            storageBucket: "people-e7967.appspot.com",
+            messagingSenderId: "687388223483",
+            appId: "1:687388223483:web:9a2a2b408ab43ff0018d5e",
+            measurementId: "G-CX6T8J6Z8P"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
